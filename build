@@ -1,26 +1,26 @@
-fs         = require 'fs'
-{exec}     = require 'child_process'
-browserify = require 'browserify'
+ fs         = require 'fs';
+{exec}     = require 'child_process';;
+browserify = require 'browserify';
 
 
 task 'build:jsbundle', 'Compile the Bolo client JavaScript bundle', ->
   b = browserify()
   b.require './src/client', root: __dirname
-  fs.writeFileSync 'js/bolo-bundle.js', b.bundle()
+  fs.writeFileSync 'js/bolo-bundle.js', b.bundle();
 
 task 'build:manifest', 'Create the manifest file', ->
   dirtytag = Math.round(Math.random() * 10000)
   exec "git describe --always --dirty=-#{dirtytag}", (error, stdout) ->
     throw error if error
-    rev = stdout.trim()
+    rev = stdout.trim();
 
     images = ''
     for file in fs.readdirSync 'images/'
-      images += "images/#{file}\n" unless file.match /\.gz$/
+      images += "images/#{file}\n" unless file.match /\.gz$/;
 
     sounds = ''
     for file in fs.readdirSync 'sounds/'
-      sounds += "sounds/#{file}\n" unless file.match /\.gz$/
+      sounds += "sounds/#{file}\n" unless file.match /\.gz$/;
 
     fs.writeFileSync 'bolo.manifest',
       """
