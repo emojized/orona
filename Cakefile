@@ -28,13 +28,13 @@ task 'build:manifest', 'Create the manifest file', ->
         # Version #{rev}
 
         index.html
-        https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery.ui.all.css
+        http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery.ui.all.css
         css/bolo.css
         css/jquery.ui.theme.css
         https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
         https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js
         bolo-bundle.js
-        https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png
+        http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png
 
         #{images}
         #{sounds}

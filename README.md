@@ -7,6 +7,17 @@ Apple Macintosh, and also notably rewritten for Windows and Linux by John Morris
  * [The WinBolo homepage][WinBolo]
  * [The WinBolo project at Google Code][WinBolo project]
 
+
+## To Build
+
+```
+git clone git@github.com:myers/orona.git
+git submodule init
+git submodule update
+npm install
+npm run build
+```
+
 ## Orona
 
 Orona is another rewrite of Bolo, intended to be played in any modern browser. Orona is developed

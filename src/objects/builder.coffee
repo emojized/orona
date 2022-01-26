@@ -28,6 +28,7 @@ class Builder extends BoloObject
 
   # Builders are only ever spawned and destroyed on the server.
   constructor: (@world) ->
+    super(world)
     # Track position updates.
     @on 'netUpdate', (changes) =>
       if changes.hasOwnProperty('x') or changes.hasOwnProperty('y')
